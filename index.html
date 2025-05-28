@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>My Dynamic Webpage</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            color: white;
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Charles Curtis</h1>
+    <h2>COP 4813 Introduction to Web Development</h2>
+    <h3>Computer Science</h3>
+    <p>Welcome to my dynamic webpage!</p>
+
+    <script>
+        const hour = new Date().getHours();
+        let bgColor;
+
+        if (hour >= 6 && hour < 12) {
+            bgColor = "#FFD700"; // Morning - Gold
+        } else if (hour >= 12 && hour < 18) {
+            bgColor = "#87CEEB"; // Afternoon - Sky Blue
+        } else if (hour >= 18 && hour < 21) {
+            bgColor = "#FF8C00"; // Evening - Dark Orange
+        } else {
+            bgColor = "#2F4F4F"; // Night - Dark Slate Gray
+        }
+
+        document.body.style.backgroundColor = bgColor;
+    </script>
+</body>
+</html>
